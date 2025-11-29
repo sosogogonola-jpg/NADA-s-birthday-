@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Nada!</title>
+<style>
+  body {
+    background: #ffe6f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+  }
+
+  .text {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ff3399;
+    margin-bottom: 20px;
+  }
+
+  .cake {
+    position: relative;
+    width: 250px;
+    height: 150px;
+    background: #ff99cc;
+    border-radius: 20px 20px 10px 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  }
+
+  .topping {
+    position: absolute;
+    top: -15px;
+    width: 100%;
+    height: 15px;
+    background: #ffcccc;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .candle {
+    width: 12px;
+    height: 50px;
+    background: #ffff66;
+    position: absolute;
+    top: -50px;
+    border-radius: 2px;
+  }
+
+  .flame {
+    width: 8px;
+    height: 12px;
+    background: orange;
+    position: absolute;
+    top: -12px;
+    left: 2px;
+    border-radius: 50%;
+    animation: flicker 1s infinite;
+  }
+
+  @keyframes flicker {
+    0% { opacity: 1; transform: scale(1);}
+    50% { opacity: 0.6; transform: scale(1.2);}
+    100% { opacity: 1; transform: scale(1);}
+  }
+
+  .sprinkle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+
+  .sprinkle1 { background: yellow; top: 10px; left: 30px; animation: bounce 1s infinite;}
+  .sprinkle2 { background: pink; top: 20px; left: 80px; animation: bounce 1.2s infinite;}
+  .sprinkle3 { background: lightblue; top: 5px; left: 150px; animation: bounce 1.1s infinite;}
+  .sprinkle4 { background: green; top: 15px; left: 200px; animation: bounce 1.3s infinite;}
+</style>
+</head>
+<body>
+  <div class="text">Happy Birthday Nada!</div>
+  <div class="cake">
+    <div class="topping"></div>
+
+    <!-- خمس شمعات -->
+    <div class="candle" style="left: 30px;"><div class="flame"></div></div>
+    <div class="candle" style="left: 70px;"><div class="flame"></div></div>
+    <div class="candle" style="left: 110px;"><div class="flame"></div></div>
+    <div class="candle" style="left: 150px;"><div class="flame"></div></div>
+    <div class="candle" style="left: 190px;"><div class="flame"></div></div>
+
+    <!-- رشات التوبينج -->
+    <div class="sprinkle sprinkle1"></div>
+    <div class="sprinkle sprinkle2"></div>
+    <div class="sprinkle sprinkle3"></div>
+    <div class="sprinkle sprinkle4"></div>
+  </div>
+</body>
+</html>
